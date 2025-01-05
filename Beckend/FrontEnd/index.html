@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket Io Front End</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    // Connecting to beckend
+    const socket = io("http://localhost:5000")
+    socket.on('connect',()=>{console.log(`FrontEnd: Connected to beckend ${socket.id}`)})
+</script>
+<body>
+<center>
+    <section>
+        <h3>User Name:</h3>
+        <p>Message</p>
+    </section>
+    <input type="text" placeholder="Enter Your Name" /><br/><br/>    
+    <input type="text" placeholder="Enter Your Name" /><br/><br/>
+    <button>Submit</button>
+</center>
+</body>
+</html>
